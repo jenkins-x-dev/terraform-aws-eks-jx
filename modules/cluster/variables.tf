@@ -22,7 +22,7 @@ variable "profile" {
 # Worker Nodes
 variable "desired_node_count" {
   type    = number
-  default = 3
+  default = 0
 }
 
 variable "min_node_count" {
