@@ -78,13 +78,13 @@ variable "velero_username" {
 variable "desired_node_count" {
   description = "The number of worker nodes to use for the cluster"
   type        = number
-  default     = 3
+  default     = 0
 }
 
 variable "min_node_count" {
   description = "The minimum number of worker nodes to use for the cluster"
   type        = number
-  default     = 3
+  default     = 0
 }
 
 variable "max_node_count" {
