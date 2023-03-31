@@ -128,7 +128,8 @@ module "eks" {
   node_groups = !var.enable_worker_group ? local.node_groups_extended : {}
 
   workers_additional_policies = [
-    "arn:${data.aws_partition.current.partition}:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser"
+    "arn:${data.aws_partition.current.partition}:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser",
+    "arn:${data.aws_partition.current.partition}:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
   ]
 
   map_users                             = var.map_users
